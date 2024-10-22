@@ -1,0 +1,84 @@
+@import './variables.scss';
+@import './typography.scss';
+@import './cards.scss';
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  @include text-preset-4;
+  background-color: #f6f5f6;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font: inherit;
+}
+
+.grid {
+  padding: 32px 16px 68px;
+  display: grid;
+  gap: 32px;
+  max-width: min(100%, 1200px);
+  margin: auto;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f"
+    "g"
+    "h";
+
+  @media (min-width: $breakpoint-small) {
+    padding: 52px 40px 76px;
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d d"
+      "e e"
+      "f f"
+      "g h";
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    grid-template-areas:
+      "a a d"
+      "b c d"
+      "b c d"
+      "b e e"
+      "g e e"
+      "g h f"
+    ;
+  }
+
+  @media (min-width: calc($breakpoint-large + 100px)) {
+    grid-template-areas:
+      "g a a d"
+      "g b c d"
+      "h b c d"
+      "h f e e"
+    ;
+    padding-top: 83px;
+    padding-bottom: 65px;
+  }
+}

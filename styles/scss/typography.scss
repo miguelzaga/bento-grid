@@ -1,0 +1,54 @@
+@import './variables.scss';
+
+@font-face {
+  font-family: "DM Sans";
+  src: url('/assets/fonts/DMSans-VariableFont_opsz\,wght.ttf');
+}
+
+@mixin text-preset-1 {
+  font-size: 2.875rem;
+  line-height: calc(42 / 46);
+  letter-spacing: -0.04em;
+  font-weight: 500;
+
+  @media (min-width: $breakpoint-small-medium) {
+    font-size: 3.375;
+  }
+}
+
+@mixin text-preset-2 {
+  font-size: 2rem;
+  line-height: calc(28 / 32);
+  letter-spacing: -0.06em;
+  font-weight: 500;
+
+  @media (min-width: $breakpoint-small-medium) {
+    font-size: 2.5rem;
+    line-height: calc(36 / 40);
+    letter-spacing: -2px;
+  }
+}
+
+@mixin text-preset-3 {
+  font-size: 1.625rem;
+  line-height: calc(24 / 26);
+  letter-spacing: -0.06em;
+  font-weight: 500;
+
+  @media (min-width: $breakpoint-small-medium) {
+    font-size: 1.75rem;
+    line-height: calc(26 / 28);
+  }
+
+  @media (min-width: $breakpoint-small-medium) {
+    font-size: 2rem;
+    line-height: calc(28 / 32);
+  }
+}
+
+@mixin text-preset-4 {
+  font-size: 1.125rem;
+  line-height: calc(20 / 18);
+  letter-spacing: -0.04em;
+  font-weight: 400;
+}
